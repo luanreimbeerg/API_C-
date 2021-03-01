@@ -22,5 +22,15 @@ namespace API_C_.Controllers
             return ator;
         }
 
+        [HttpGet]
+
+        public List<Models.TbAtor> Listar()
+        {
+            Models.apiDBContext ctx = new Models.apiDBContext();
+            List<Models.TbAtor> atores = ctx.TbAtor.ToList();
+
+            return atores;
+        }
+
     }
 }
